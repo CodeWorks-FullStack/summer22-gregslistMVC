@@ -13,6 +13,12 @@ class CarsService{
     // NOTE the = here is what triggers our 'listeners'
     ProxyState.cars = [...ProxyState.cars, new Car(newCar)]
     console.log('current cars',ProxyState.cars);
+    // another example of the spread operator working
+    // arr = [ a, b, c, d ]
+    // ...arr => a, b, c, d
+    // ...arr, e => a, b, c, d, e
+    // [...arr, e] => [ a, b, c, d, e ]
+    // we are doing this above but with car objects instead of letters 'a-d' being the cars already in the proxystate and 'e' being the 'new Car(newCar)' added.
   }
 
   deleteCar(id){

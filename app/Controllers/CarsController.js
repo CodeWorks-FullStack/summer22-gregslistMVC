@@ -38,7 +38,7 @@ export class CarsController{
     window.event.preventDefault()
     let form = window.event.target
     console.log(form);
-
+    // NOTE assemble all the data from the form into a object for ease of transfer and to later turn it into a Car Class
    let newCar ={
     make: form.make.value,
     model: form.model.value,
@@ -48,6 +48,7 @@ export class CarsController{
     description: form.description.value,
    }
     carsService.createCar(newCar)
+    // NOTE form.reset() clears the form after the car was created
     form.reset()
     // NOTE replaced by listeners in constructor
     // _drawCars()
