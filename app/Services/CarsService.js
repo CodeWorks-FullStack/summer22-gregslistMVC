@@ -27,6 +27,7 @@ class CarsService{
     // ProxyState.cars.splice(carIndex, 1)
     // console.log('car deleted', ProxyState.cars);
     // ProxyState.cars = ProxyState.cars
+    // NOTE while the above method would work it fails to trigger the listener attached to 'cars' that re-draws them.  This line below DOES trigger the listener by creating a new array and only keeping everything that doesn't have a matching id to the car you clicked on
     ProxyState.cars = ProxyState.cars.filter(c => c.id != id)
   }
 
