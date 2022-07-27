@@ -3,6 +3,7 @@ import { generateId } from '../Utils/generateId.js'
 
 export class Car{
   constructor({make, model, year, price, img, description}){
+    // NOTE we need an ID for this so that each car has a guaraSnteed unique identifier
     this.id = generateId()
     this.make = make,
     this.model = model,
